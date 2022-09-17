@@ -41,11 +41,11 @@ function check()
     classifier.classify(img,gotResult);
 }
 
-function gotResult (error,result){
+function gotResult (error,results){
 if (error) {
     console.log(error);
     } else {
-        console.log(result);
+        console.log(results);
         document.getElementById("result_emotion_name").innerHTML = results[0].label;
         document.getElementById("result_emotion_name2").innerHTML = results[0].label;
         prediction_1 = results[0].label;
